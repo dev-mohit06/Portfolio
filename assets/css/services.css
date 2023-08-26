@@ -1,0 +1,468 @@
+/* ===== GOOGLE FONTS ==== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/*  TODO: hear i am usign root because avoid the residency of the color which i am using */
+/* TODO: this css file only for main(home) */
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --hue: 207;
+  --sat: 90%;
+  --lig: 61%;
+  --first-color: #42a5f5;
+  --first-color-alt: #2f9bf4;
+  /* -4% */
+  --title-color: #22272b;
+  --text-color: #657481;
+  --text-color-light: #bac0c4;
+  --text-color-lighten: #e8ebed;
+  --body-color: #fafdff;
+  --container-color: #f0f8ff;
+
+  /*========== Font ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 1.75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  --tiny-font-size: .625rem;
+  /* ========== Font Weight ========== */
+  --font-medium: 500;
+  --font-semibold: 600;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: .4s;
+  /* for light mode animation */
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semibold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 968px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.section {
+  padding: 4.5rem 0 1rem;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  transition: .4s;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-bottom: 2rem;
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+
+/* Skills */
+.skills__container{
+  row-gap: 2rem;
+  padding-top: 1rem;
+}
+
+.skills__content{
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+}
+
+.skills__title{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--first-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.skills__box{
+  display: flex;
+  justify-content: center;
+  column-gap: 2.5rem;
+}
+
+.skills__group{
+  display: grid;
+  align-content: flex-start;
+  row-gap: 1rem;
+}
+.skills__data
+{
+  display: flex;
+  /* column-gap: .5rem; */
+}
+.skills .bxs-badge-check
+{
+  font-size: 1rem;
+  color: var(--first-color);
+}
+
+.skills__name{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  line-height: 18px;
+}
+
+.skills__level
+{
+  font-size: var(--tiny-font-size);
+}
+
+/* ========== Footer ========== */
+.footer__copy {
+  display: block;
+  margin: 2.5rem 0 2rem;
+  text-align: center;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+/* for small devices */
+@media screen and (max-width: 320px){
+  .skills__box{
+    column-gap: 1;
+    zoom: 0.7;
+  }
+  .skills__content
+  {
+    padding: 0;
+  }
+  .skills__data{
+    column-gap: 0;
+  }
+}
+/* for medium devices */
+@media screen and (min-width: 576px){
+  .skills__container
+  {
+    justify-content: center;
+  }
+  .skills__content{
+    padding: 2rem 4rem;
+  }
+}
+@media screen and (max-width: 424px){
+  .skills__box{
+    column-gap: 1;
+    zoom: 0.7;
+  }
+}
+/* For Large Devices */
+@media screen and (min-width: 992px){
+  .container
+  {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section{
+    padding: 6.5rem 0 1rem;
+  }
+  .skills__container{
+    grid-template-columns: repeat(2,350px);
+    column-gap: 3;
+  }
+}
+
+
+
+.accordion {
+  display: grid;
+  align-content: center;
+  height: 100vh;
+}
+
+.accordion__container {
+  display: grid;
+  row-gap: .75rem;
+  padding: 2rem 1rem;
+  /* background-color: var(--container-color); */
+  border-radius: .5rem;
+  /* box-shadow: 0 12px 32px rgba(51, 51, 51, 0.1); */
+}
+
+.accordion__title {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-weight: 400;
+  margin-top: .15rem;
+  transition: .2s;
+}
+
+.accordion__header {
+  display: flex;
+  column-gap: .5rem;
+  padding: 1.25rem 1.25rem 1.25rem 1rem;
+  cursor: pointer;
+  /* pointer-events: none; */
+}
+
+.accordion__description {
+  padding: 0 1.25rem 1.25rem 3rem;
+  font-size: var(--smaller-font-size);
+}
+
+.accordion__icon {
+  font-size: 1.5rem;
+  height: max-content;
+  color: var(--title-color);
+  transition: .3s;
+}
+
+.accordion__item {
+  box-shadow: 0 2px 6px rgba(38, 38, 38, 0.1);
+  background-color: var(--container-color);
+  border-radius: .25rem;
+  position: relative;
+  transition: all .25s ease;
+}
+
+.accordion__item::after {
+  content: '';
+  background-color: var(--first-color);
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: .25rem 0 0 .25rem;
+}
+
+.accordion__item:nth-child(1) {
+  background-color: #fff7f0;
+}
+
+.accordion__item:nth-child(1)::after {
+  background-color: #ffc08a;
+}
+
+.accordion__item:nth-child(2) {
+  background-color: #f0f0ff;
+}
+
+.accordion__item:nth-child(2)::after {
+  background-color: #8a8aff;
+}
+
+.accordion__item:nth-child(3) {
+  background-color: #fff0f3;
+}
+
+.accordion__item:nth-child(3)::after {
+  background-color: #ff8aa1;
+}
+
+.accordion__item:nth-child(4) {
+  background-color: #f0faff;
+}
+
+.accordion__item:nth-child(4)::after {
+  background-color: #8ad8ff;
+}
+
+.accordion__content {
+  overflow: hidden;
+  height: 0;
+  transition: all .25s ease;
+}
+
+/*Rotate icon and add font weight to titles*/
+.accordion-open .accordion__icon {
+  transform: rotate(45deg);
+}
+
+.accordion-open .accordion__title {
+  font-weight: 600;
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .accordion__container {
+    width: 550px;
+    padding: 2.5rem;
+    justify-self: center;
+    border-radius: .75rem;
+  }
+  .accordion__header {
+    padding: 1.5rem;
+  }
+  .accordion__title {
+    padding-right: 3.5rem;
+  }
+  .accordion__description {
+    padding: 0 4rem 1.25rem 3.5rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 968px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Loader */
+.wrapper
+{
+    transition: 7s cubic-bezier(0.68, 0.57, 0.4, 0.84);
+    opacity: 0;
+}
+.loader
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96vh;
+    /* width: 100%; */
+    margin-left: -6sem;
+    transition: 4.5s;
+    background-color: #fafdff;
+}
+svg
+{
+    font-family: 'Pacifico', cursive;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+svg text{
+    animation: stroke 3s infinite alternate;
+    stroke-width: 2;
+    stroke: #365fa0;
+    font-size: 140px;
+    transition: opacity 0.75s, visibility 0.75;
+}
+.non
+{
+    opacity: 0;
+}
+.tran
+{
+    transition: 2s;
+}
+@keyframes stroke
+{
+    0%
+    {
+        fill: rgba(72, 138, 20, 0);
+        stroke: rgba(54, 95, 160 ,1);
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+    }
+    70%
+    {
+        fill: rgba(72, 138, 20, 0);
+        stroke: rgba(54, 95, 160 ,1);
+    }
+    80%
+    {
+        fill: rgba(72, 138, 20, 0);
+        stroke: rgba(54, 95, 160 ,1);
+        stroke-width: 3;
+    }
+    100%
+    {
+        fill: rgba(72, 138, 204, 1);
+        stroke: rgba(54, 95, 160 ,0);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+    }
+}

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ========== FAVICON ========== -->
+    <link rel="shortcut icon" href="assets/imgs/favicon.png" type="image/x-icon">
+
+    <!-- ========== REMIXICONS ========== -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- ========== CSS ========== -->
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/scrollbar.css">
+
+
+    <title>Home</title>
+</head>
+
+<body id="body-pd" onload="myFunction()">
+    <div class="loader" id="loading">
+        <svg viewBox="0 0 1320 300">
+            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                Loading...
+            </text>
+        </svg>
+    </div>
+    <!-- Parent for main content -->
+    <div class="wrapper" id="wrap">
+        <!-- ========== NAV ========== -->
+        <div class="l-navbar" id="navbar">
+            <nav class="nav">
+                <div>
+                    <div class="nav__brand">
+                        <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                        <a href="#" class="nav__logo">Mohit Paddhariya</a>
+                    </div>
+                    <div class="nav__list">
+                        <a href="index.html" class="nav__link active">
+                            <ion-icon name="home" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Home</span>
+                        </a>
+                        <a href="assets/html/about.html" class="nav__link">
+                            <ion-icon name="information-circle-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">About</span>
+                        </a>
+                        <a href="assets/html/services.html" class="nav__link">
+                            <ion-icon name="cog-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Services</span>
+                        </a>
+                        <a href="assets/html/contact.html" class="nav__link">
+                            <ion-icon name="mail-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">Contect Me</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="https://github.com/ActiveEveryday" class="copyright">
+                    <ion-icon name="logo-github" class="nav__icon"></ion-icon>
+                    <span class="nav_name">Mohit Paddhariya</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="parent">
+            <!-- Profile Section -->
+            <header class="profile container">
+                <div class="profile__container grid">
+                    <div class="profile__data">
+                        <div class="profile__border">
+                            <div class="profile__perfil">
+                                <img src="assets/imgs/Profile-img.png" alt="Profile-img">
+                            </div>
+                        </div>
+
+                        <h2 class="profile__name">Mohit Paddhariya</h2>
+                        <h3 class="profile__profession">Web Devloper</h3>
+
+                        <ul class="profile__social">
+                            <a href="https://www.instagram.com/___mohit06/" target="_blank"
+                                class="profile__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mohit-paddhariya/" target="_blank"
+                                class="profile__social-link">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                            <a href="https://github.com/ActiveEveryday" target="_blank" class="profile__social-link">
+                                <i class="ri-github-line"></i>
+                            </a>
+                        </ul>
+                    </div>
+
+                    <div class="profile__info grid">
+                        <div class="profile__info-group">
+                            <h3 class="profile__info-number">2</h3>
+                            <p class="profile__info-description">Years of <br> work</p>
+                        </div>
+                        <div class="profile__info-group">
+                            <h3 class="profile__info-number">+14</h3>
+                            <p class="profile__info-description">Completed <br> projects</p>
+                        </div>
+                        <div class="profile__info-group">
+                            <h3 class="profile__info-number">10</h3>
+                            <p class="profile__info-description">Satisfied <br> customers</p>
+                        </div>
+                    </div>
+
+                    <div class="profile__buttons">
+                        <!-- Download CV -->
+                        <a download="" href="assets/pdf/CV.pdf" class="button">
+                            Download CV <i class="ri-arrow-down-line"></i>
+                        </a>
+
+                        <div class="profile__buttons-small">
+                            <a href="https://api.whatsapp.com/send?phone=+918401815038&text=Thanks for contacting to Mohit Paddhariya"
+                                target="_blank" class="button button__small button__gray">
+                                <i class="ri-whatsapp-line"></i>
+                            </a>
+
+                            <a href="https://m.me/mohit-padadhairya/" target="_blank"
+                                class="button button__small button__gray">
+                                <i class="ri-messenger-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Filter Tabs -->
+            <main class="main">
+                <section class="filters container">
+                    <!-- =========== Filers Tabs =========== -->
+                    <ul class="filters__content">
+                        <button class="filters__button filter-tab-active" data-target="#project">
+                            Projects
+                        </button>
+                        <button class="filters__button" data-target="#skills">
+                            Skills
+                        </button>
+                    </ul>
+                    <div class="filters__sections">
+                        <!-- =========== Projects =========== -->
+                        <div class="projects__content grid filters__active" data-content id="project">
+                            <article class="projects__card">
+                                <img src="assets/projects-tab_thumbnails/CV-resume.jpg" alt="Project Image"
+                                    class="projects__img">
+
+                                <div class="projects__modal">
+                                    <div>
+                                        <span class="projects__subtitle">Web Resume</span>
+                                        <h3 class="projects__title">Collest Web Resume.</h3>
+                                        <a target="_blank" href="assets/projects/Responcive CV/index.html"
+                                            class="projects__button button button__small">
+                                            <i class="ri-links-fill"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="projects__card">
+                                <img src="assets/projects-tab_thumbnails/IUR.jpg" alt="Project Image" class="projects__img">
+
+                                <div class="projects__modal">
+                                    <div>
+                                        <span class="projects__subtitle">Hover Effect</span>
+                                        <h3 class="projects__title">Cool Hover Using Css Only</h3>
+                                        <a target="_black" href="assets/projects/IUR/index.html" class="projects__button button button__small">
+                                            <i class="ri-links-fill"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="projects__card">
+                                <img src="assets/projects-tab_thumbnails/Get-Location.jpg" alt="Project Image" class="projects__img">
+
+                                <div class="projects__modal">
+                                    <div>
+                                        <span class="projects__subtitle">Do you know your current location!!</span>
+                                        <h3 class="projects__title">Applaction of J.S.</h3>
+                                        <a target="_blank" href="assets/projects/Get-Location/index.html" class="projects__button button button__small">
+                                            <i class="ri-links-fill"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="projects__card">
+                                <img src="assets/projects-tab_thumbnails/Internet-Checker.jpg" alt="Project Image" class="projects__img">
+
+                                <div class="projects__modal">
+                                    <div>
+                                        <span class="projects__subtitle">Check Your Connection!!</span>
+                                        <h3 class="projects__title">It is an J.S inbuilt Function</h3>
+                                        <a target="_blank" href="assets/projects/Internet-Checker/index.html" class="projects__button button button__small">
+                                            <i class="ri-links-fill"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="projects__card">
+                                <img src="assets/projects-tab_thumbnails/DivFollows.jpg" alt="Project Image" class="projects__img">
+
+                                <div class="projects__modal">
+                                    <div>
+                                        <span class="projects__subtitle">It's Magic</span>
+                                        <h3 class="projects__title">Div Follows Cursor</h3>
+                                        <a target="_blank" href="assets/projects/DivFollows/index.html" class="projects__button button button__small">
+                                            <i class="ri-links-fill"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <!-- =========== Skills =========== -->
+                        <div class="skills_content grid" data-content id="skills">
+                            <div class="skills__area">
+                                <h3 class="skills__title">
+                                    Frontend developer
+                                </h3>
+
+                                <div class="skills__box">
+                                    <div class="skills__group">
+                                        <div class="skills_data">
+                                            <i class="ri-check-line"></i>
+
+                                            <div>
+                                                <h3 class="skills__name">HTML</h3>
+                                                <span class="skills__level">Intermediate</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="skills_data">
+                                            <i class="ri-check-line"></i>
+
+                                            <div>
+                                                <h3 class="skills__name">CSS</h3>
+                                                <span class="skills__level">Advance</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="skills_data">
+                                            <i class="ri-check-line"></i>
+
+                                            <div>
+                                                <h3 class="skills__name">Javascript</h3>
+                                                <span class="skills__level">Basic</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__group">
+                                        <div class="skills_data">
+                                            <i class="ri-check-line"></i>
+
+                                            <div>
+                                                <h3 class="skills__name">React</h3>
+                                                <span class="skills__level">Intermediate</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="skills_data">
+                                            <i class="ri-check-line"></i>
+
+                                            <div>
+                                                <h3 class="skills__name">Bootstrap</h3>
+                                                <span class="skills__level">Intermediate</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="skills_data">
+                                            <i class="ri-check-line"></i>
+
+                                            <div>
+                                                <h3 class="skills__name">Git</h3>
+                                                <span class="skills__level">Advance</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skills__area">
+                                <h3 class="skills__title">
+                                    Backend Developer
+                                </h3>
+
+                                <div class="skills__box">
+                                    <div class="skills__group">
+                                        <div class="skills_data">
+                                            <i class="ri-check-line"></i>
+
+                                            <div>
+                                                <h3 class="skills__name">PHP</h3>
+                                                <span class="skills__level">Intermediate</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="skills_data">
+                                            <i class="ri-check-line"></i>
+
+                                            <div>
+                                                <h3 class="skills__name">MySQL</h3>
+                                                <span class="skills__level">Advance</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="skills_data">
+                                            <i class="ri-check-line"></i>
+
+                                            <div>
+                                                <h3 class="skills__name">Firebase</h3>
+                                                <span class="skills__level">Basic</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__group">
+                                        <div class="skills_data">
+                                            <i class="ri-check-line"></i>
+
+                                            <div>
+                                                <h3 class="skills__name">Python</h3>
+                                                <span class="skills__level">Intermediate</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="skills_data">
+                                            <i class="ri-check-line"></i>
+
+                                            <div>
+                                                <h3 class="skills__name">Node Js</h3>
+                                                <span class="skills__level">Intermediate</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- ====== FOOTER ===== -->
+            <footer class="footer container">
+                <span class="footer__copy">
+                    &#169; Mohit Paddhariya. All rights reserved
+                </span>
+            </footer>
+        </div>
+    </div>
+    <!-- ========== ICONS ========== -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <!-- it is for loading (jquery) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <!-- ========== JS ========== -->
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/scrollreveal.home.js" onload="load_complete()"></script>
+
+    <!-- loader logic -->
+    <script>
+        function myFunction() {
+            let wrap = document.getElementById('wrap');
+            let load = document.getElementById('loading');
+            wrap.style.opacity = "1";
+            load.style.opacity = "0";
+        }
+    </script>
+</body>
+
+</html>
